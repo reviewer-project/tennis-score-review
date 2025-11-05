@@ -64,7 +64,7 @@ UUID uuid = UUID.fromString(dto.matchID());
 
 10. Комментарии
 Коментарии тут не несут полезной нагрузки, а констатируют очевидное
-```
+```java
 if (!MatchPointValidator.isValid(dto)) {
             // невалидный winnerID
             response.sendRedirect(request.getContextPath() + Paths.MATCH_SCORE + "?uuid=" + dto.matchID());
@@ -72,7 +72,7 @@ if (!MatchPointValidator.isValid(dto)) {
         }
 ```
 
-```
+```java
 // Если оба игрока имеют по 6 геймов, начинается тай-брейк
             if (score.getGamesPlayer1() == 6 && score.getGamesPlayer2() == 6) {
                 score.setTieBreak(true);
@@ -80,7 +80,7 @@ if (!MatchPointValidator.isValid(dto)) {
 ```
 
 Лучше джавадок
-```
+```java
 // ==== URL маршруты ====
 public static final String MATCHES = "/matches";
     public static final String MATCH_SCORE = "/match-score";
